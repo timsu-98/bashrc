@@ -116,24 +116,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# source ros2 and set cyclonedds to only use lo and docker interfaces.
-source /opt/ros/humble/setup.bash
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-export CYCLONEDDS_URI=~/ws/cyclonedds_uri.xml
-source /home/xiyan/perl5/perlbrew/etc/bashrc
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/xiyan/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/xiyan/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/xiyan/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/xiyan/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
